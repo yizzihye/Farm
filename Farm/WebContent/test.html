@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <title>RyanFarm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="materialize.min.css">
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script src="materialize.min.js"></script>
+      </head>
+
+    <body>
+
+      <div id="left_collection">
+        <div id="left_intro" class="light-blue darken-3">
+          <div class="white-text right-align" style="margin-right:10%; font-size: 30pt">Joel Cox </div>
+          <div class="black-text right-align"  style="margin-right:10%"> Ui & UX Designer</div>
+          <div class="black-text right-align" style="margin-right:10%"> JavaScript Engineer</div>
+        </div>
+        <div class="collection">
+          <a href="#!" id="profile" class="collection-item">profile</a>
+          <a href="#!" id="signin" class="collection-item">Sign in</a>
+          <a href="#!" id="signup" class="collection-item">Sign up</a>
+          <a href="#!" id="timetable" class="collection-item">Timetable</a>
+        </div>
+      </div>
+
+      <div id="content_right">
+        <div id="content_center">
+          <div><h3 class="text-grey lighten"> Joel Cox <h3></div>
+          <blockquote>
+            <div> 
+             <i class="Medium material-icons black-text">phone</i>
+             (031)111-1111
+            </div>
+            <div>
+              <i class="Medium material-icons black-text">email</i>
+              sss@gmail.com
+            </div>
+            <div>
+              <i class="Medium material-icons black-text">store</i>
+              511
+            </div>
+          </blockquote>
+        </div>
+        <div id="profile_click" class="yellow lighten-5">
+
+        </div>
+        <div id="signin_click" class="yellow lighten-5">
+          <div id="checkbox">
+            <p>
+              <input type="checkbox" id="student" checked="checked"/>
+              <label for="student">Student</label>
+              <input type="checkbox"id="manager"/>
+              <label for="manager">manager</label>
+            </p>
+          </div>
+
+          <div class="input-field" >
+            <i class="material-icons prefix">account_circle</i>
+            <input id="signin_id" type="text" class="validate">
+            <label for="icon_prefix">ID</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">phone</i>
+            <input id="signin_pw" type="tel" class="validate">
+            <label for="icon_telephone">Password</label>
+          </div>  
+          <div id="login_button" >
+            <a class="waves-effect waves-teal btn-flat white">Login<i class="material-icons right">send</i></a>
+          </div>
+        </div>
+        <div id="signup_click" class="yellow lighten-5">
+          <h6 class="black-text center-align">Sign_up</h6>
+            <form action="#">
+              <p>
+                <input class="with-gap" name="group1" type="radio" id="test1" />
+                <label for="test1">Student</label>
+                <input class="with-gap" name="group1" type="radio" id="test2" />
+                <label for="test2">Manager</label>
+              </p>
+            </form>
+  
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input placeholder="id" id="signup_id" type="text" class="validate">
+                    <label for="signup_id">ID</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="passeword" id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="passeword" id="password_check" type="password"class="validate">
+                    <label for="password">Password_check</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="email" id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div id="signup_button" >
+                  <a class="waves-effect waves-teal btn-flat white">signup<i class="material-icons right">send</i></a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="timetable_click" class="yellow lighten-5">
+          </div>
+         </div>
+        </div>
+      </div>
+    </body>
+  </html>
