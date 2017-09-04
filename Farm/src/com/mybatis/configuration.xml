@@ -5,7 +5,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 	<properties resource="com/mybatis/jdbc.properties" />
 	<typeAliases>
-		<typeAlias type="com.dto.GoodsDTO" alias="GoodsDTO"/>
+		<typeAlias type="com.dto.GoodsDTO" alias="GoodsDTO" />
+		<typeAlias type="com.dto.MemberDTO" alias="MemberDTO" />
+		<typeAlias type="com.dto.FreeBoardDTO" alias="FreeBoardDTO" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -20,5 +22,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</environments>
 	<mappers>
 		<mapper resource="com/mybatis/GoodsMapper.xml" />
+		<mapper resource="com/mybatis/MemberMapper.xml"/>
+		<mapper resource="com/mybatis/FreeBoardMapper.xml"/>
 	</mappers>
 </configuration>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.FreeBoardMapper">
+
+	<select id="selectAll" resultType="FreeBoardDTO">
+		select board_num,title,author,to_char(writeday, 'YYYY/MM/dd')writeday,readCnt
+		from freeboard
+		order by num desc
+	</select>
+
+	<insert id="boardWrite" parameterType="FreeBoardDTO">
+		insert into
+		freeboard(board_num,title,author,content)
+		values(board_num_seq.nextval, #{title},#{author},#{content})
+	</insert>
+
+	<select id="selectByTitle" resultType="FreeBoardDTO" parameterType="string">
+		select author, title,content, to_char(writeday,'YYYY/MM/dd')writeday, readCnt
+		from freeboard
+		where title=#{title}
+	</select>
+
+	<update id="readCnt" parameterType="int">
+		update freeboard
+		set 
+		readCnt = readCnt+1
+		where 
+		board_num=#{board_num}
+	</update>
+
+	<update id="updateByNum" parameterType="FreeBoardDTO">
+		update freeboard
+		set
+		title=#{title}, author=#{author}, content=#{content}
+		where
+		board_num=#{board_num}
+	</update>
+
+	<delete id="deleteByNum" parameterType="int">
+		delete from freeboard
+		where
+		board_num = #{board_num}
+	</delete>
+
+
+
+
+
+
+</mapper>
